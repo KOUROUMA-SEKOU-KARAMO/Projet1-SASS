@@ -1,0 +1,47 @@
+
+header{
+      height: 100vh;
+   .container-header{
+      height: 100%;
+      background: none;
+      @include center1;
+      flex-direction: column;
+      text-align: center;
+      position: relative;
+
+   .top{
+    h1{
+        @include center1;
+         font-family: $font1;
+         text-transform: uppercase;
+         margin:90px auto ;
+         font-size: 3.5rem;
+         color:$colorwhite;
+         text-align: center;
+         width: 55%;
+    }
+    p{
+      color:$colorwhite;
+      line-height: 30px;
+      text-align: center;
+      margin: 30px 
+    }
+    a{
+        display: block;
+      margin:0 auto;
+      height: 30px;
+      width: 30px ;
+      color:$colorwhite;
+      font-weight: bold;
+      transition: .5s ;
+      @include center1;
+         border-radius: 50%;
+         border: 2px solid $colorwhite;
+         &:hover{
+            background: rgba(149, 219, 219, 0.461) ;
+         }
+    }
+   }
+
+   }
+}

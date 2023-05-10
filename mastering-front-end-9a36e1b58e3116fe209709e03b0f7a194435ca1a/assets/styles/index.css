@@ -1,0 +1,357 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter/static/Inter-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "Merriweather";
+  src: url("../fonts/Merriweather/Merriweather-Light.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Merriweather;
+  background: url("/assets/images/bg.jpg") center/cover;
+  font-family: Merriweather;
+  min-height: 100vh;
+}
+
+header, main, footer {
+  width: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  color: black;
+  border: 2px solid black;
+  font-family: Inter;
+  color: black;
+  text-transform: uppercase;
+  line-height: 30px;
+  padding: 10px;
+  text-align: center;
+  margin: 20px;
+  padding: 10px 30px;
+  display: inline-block;
+}
+.btn:hover {
+  background: rgb(165, 160, 160);
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  background: white;
+}
+
+header {
+  height: 100vh;
+}
+header .container-header {
+  height: 100%;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+header .container-header .top h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Inter;
+  text-transform: uppercase;
+  margin: 90px auto;
+  font-size: 3.5rem;
+  color: white;
+  text-align: center;
+  width: 55%;
+}
+header .container-header .top p {
+  color: white;
+  line-height: 30px;
+  text-align: center;
+  margin: 30px;
+}
+header .container-header .top a {
+  display: block;
+  margin: 0 auto;
+  height: 30px;
+  width: 30px;
+  color: white;
+  font-weight: bold;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+header .container-header .top a:hover {
+  background: rgba(149, 219, 219, 0.461);
+}
+
+nav {
+  background: rgba(247, 246, 246, 0.206);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+nav li {
+  padding: 20px 20px;
+}
+nav .nav-left {
+  display: flex;
+  align-items: center;
+}
+nav .nav-left li:first-child {
+  background: white;
+}
+nav .nav-left li:first-child a {
+  color: black;
+}
+nav .nav-left li:hover {
+  background: white;
+}
+nav .nav-left li:hover:first-child a {
+  color: black;
+}
+nav .nav-left li:hover a {
+  color: black;
+}
+nav .nav-left li a {
+  color: white;
+  text-transform: uppercase;
+  font-family: Inter;
+}
+nav .nav-right {
+  display: flex;
+}
+nav .nav-right li {
+  padding: 20px 30px;
+  font-weight: bold;
+  font-size: 20px;
+}
+nav .nav-right li a {
+  padding: 20px;
+  color: white;
+}
+nav .nav-right li a:hover {
+  background: rgba(98, 225, 237, 0.313);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.section1 {
+  background: #000;
+  width: 100%;
+  height: 100%;
+}
+.section1 .container-section1 {
+  width: 80%;
+  padding: 50px 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section1 .container-section1 span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  width: 100%;
+  text-align: center;
+  margin: 50px;
+  position: relative;
+}
+.section1 .container-section1 span:before, .section1 .container-section1 span:after {
+  content: "";
+  height: 2px;
+  background: gray;
+  position: absolute;
+  width: 40%;
+}
+.section1 .container-section1 span:before {
+  left: 0;
+}
+.section1 .container-section1 span:after {
+  right: 0;
+}
+.section1 .container-section1 h2 {
+  font-family: Inter;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  text-align: center;
+  margin: 20px;
+}
+.section1 .container-section1 p {
+  margin: 30px 0;
+  line-height: 36px;
+}
+.section1 .container-section1 .img {
+  width: 100%;
+  height: 500px;
+  background: url("../images/pic01.jpg") center/cover;
+}
+.section1 .container-section1 .btn {
+  max-width: content;
+  display: inline;
+}
+
+.section2 {
+  width: 100%;
+}
+.section2 .container-section2 {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  border-top: 1px solid gray;
+}
+.section2 .container-section2 .left, .section2 .container-section2 .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+.section2 .container-section2 .left p, .section2 .container-section2 .right p {
+  line-height: 30px;
+  margin: 20px;
+}
+.section2 .container-section2 .left h3, .section2 .container-section2 .right h3 {
+  font-family: Inter;
+  color: black;
+  text-transform: uppercase;
+  line-height: 30px;
+  padding: 10px;
+  text-align: center;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.section2 .container-section2 .left span, .section2 .container-section2 .right span {
+  color: rgb(90, 87, 87);
+}
+.section2 .container-section2 .left {
+  border-right: 1px solid rgb(90, 87, 87);
+}
+.section2 .container-section2 .left .img {
+  margin: 10px 50px;
+  height: 300px;
+  width: 100%;
+  background: url("../images/pic02.jpg") center/cover;
+}
+.section2 .container-section2 .right .img {
+  height: 300px;
+  width: 100%;
+  margin: 10px 50px;
+  background: url("../images/pic03.jpg") center/cover;
+}
+
+footer {
+  margin: 30px 0;
+}
+footer .container-footer {
+  min-height: 640px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+footer .container-footer form {
+  padding: 60px 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+footer .container-footer form label {
+  display: flex;
+  font-family: Inter;
+  color: black;
+  text-transform: uppercase;
+  line-height: 30px;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  padding-left: 0;
+  color: gray;
+}
+footer .container-footer form input[type=text], footer .container-footer form input[type=email] {
+  margin-bottom: 20px;
+  height: 45px;
+  display: block;
+  width: 100%;
+  border: 2px solid rgb(236, 235, 234);
+  border-radius: 5px;
+}
+footer .container-footer form textarea {
+  height: 200px;
+  width: 100%;
+  resize: none;
+  border: 2px solid rgb(236, 235, 234);
+  border-radius: 5px;
+}
+footer .container-footer form .btn {
+  position: relative;
+  margin-left: 0;
+}
+footer .container-footer .right-form {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  border-left: 1px solid rgb(165, 160, 160);
+  align-items: center;
+  color: gray;
+}
+footer .container-footer .right-form .left {
+  border-top: 1px solid rgb(90, 87, 87);
+  padding-top: 50px;
+  padding-left: 20px;
+}
+footer .container-footer .right-form .right {
+  border-top: 1px solid rgb(90, 87, 87);
+  padding-top: 50px;
+  padding-left: 20px;
+}
+footer .container-footer .right-form ul {
+  display: flex;
+  border-top: 1px solid rgb(90, 87, 87);
+  padding-top: 20px;
+  padding-left: 20px;
+}
+footer .container-footer .right-form ul li {
+  padding: 10px;
+  margin: 10px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px solid rgb(236, 235, 234);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .container-footer .right-form ul li a {
+  background: white;
+  color: black;
+}/*# sourceMappingURL=index.css.map */

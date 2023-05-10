@@ -1,0 +1,98 @@
+
+footer{
+  margin:30px 0;
+  .container-footer{ 
+    min-height: 640px;
+      
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    form{ 
+      padding:60px 50px ;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      label{
+        display: flex;
+         @include title ;
+         width: 100%;
+         padding-left: 0;
+         color: $colorgray1;
+      }
+      input[type="text"], input[type="email"] {
+        margin-bottom: 20px ;
+        height: 45px ;
+        display: block;
+        width: 100%;
+         border:2px solid rgb(236, 235, 234);
+         border-radius: 5px;
+
+
+      }
+      textarea{
+           height:200px ; 
+         width: 100%;
+         resize:none;
+         border:2px solid rgb(236, 235, 234);
+         border-radius: 5px;
+
+      }
+
+      .btn{
+        position: relative;
+        margin-left: 0;
+      }
+    }
+
+    .right-form{
+      display: grid;
+      grid-template-columns: 30% 70%;
+      border-left: 1px solid $colorgray2;
+      align-items: center;
+      color: $colorgray1;
+
+      .left{
+        border-top: 1px solid $colorgray3;
+        padding-top: 50px;
+      padding-left: 20px ;
+
+
+      }
+      .right{
+        border-top: 1px solid $colorgray3;
+        padding-top: 50px;
+      padding-left: 20px ;
+
+
+      }
+
+      ul{
+         display: flex;
+         border-top: 1px solid $colorgray3;
+         padding-top: 20px;
+       padding-left: 20px ;
+
+         li{
+          padding: 10px;
+          margin: 10px;
+          height: 20px ;
+          width: 20px;
+          border-radius: 50%;
+          border:2px solid rgb(236, 235, 234);
+
+          color: $colorwhite;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          a{
+            background:  $colorwhite;
+            color: $colorblack;
+            
+          }
+         }
+      };
+      
+    }
+} 
+}

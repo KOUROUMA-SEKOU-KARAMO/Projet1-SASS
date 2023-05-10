@@ -1,0 +1,89 @@
+
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/Inter/static/Inter-ExtraBold.ttf");
+}
+@font-face {
+    font-family: "Merriweather";
+    src: url("../fonts/Merriweather/Merriweather-Light.ttf");
+}
+
+
+// Declaration des variables 
+
+
+//   fonts 
+$font1:Inter ;
+$font2:Merriweather;
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+
+//   *********   colors ******* 
+
+ $colorwhite:white;
+ $colorgray1:gray;
+ $colorgray2:rgb(165, 160, 160);
+ $colorgray3:rgb(90, 87, 87);
+ $colorblack:black;
+
+
+body{
+    font-family: $font2;
+    background: url("/assets/images/bg.jpg") center/cover;
+    font-family: $font2;
+    min-height: 100vh;
+
+}
+
+ header,main, footer{
+    width: 100%;
+ }
+// ***   list **** 
+li{
+  list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+  @mixin title{
+      font-family: $font1;
+      color:$colorblack;
+      text-transform: uppercase;
+      line-height: 30px;
+       padding: 10px ;
+       text-align: center;
+         
+       
+  }
+
+  @mixin center1{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+  }
+  @mixin center2{
+     display: flex;
+
+  }
+.btn{
+   color: $colorblack; 
+    border: 2px solid black ;
+     @include title ;
+     margin: 20px;
+     padding:10px 30px;
+     display:inline-block;
+     &:hover{
+        background:$colorgray2;
+     }
+}
+
+// ****** sytle container general ***** 
+.container{
+  width: 80%;
+  margin: 0 auto;
+    background: white;
+}
+
