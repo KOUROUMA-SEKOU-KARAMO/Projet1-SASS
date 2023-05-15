@@ -1,0 +1,125 @@
+header{
+    //  min-height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background: none;
+     position: relative;
+
+        transform: translateY(140px);
+        opacity: 0;
+         animation: animHeader 1.5s ease forwards  ;
+
+    @keyframes animHeader {
+        to{
+            transform: translateY(0);
+            opacity:1;
+        }
+        
+    }
+
+     h1{
+        @include title;
+         color: $colorwhite;
+        font-size: 3.5rem;
+        text-align: center;
+        width: 45%;
+        margin: 50px auto;
+     }
+
+     p{
+        color:$colorwhite;
+     }
+
+    .btn{
+         margin: 89px auto;
+         margin-top: 10px;
+         border-radius: 50%;
+         height:50px ;
+         width:50px ;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         color: $colorwhite;
+         border: 2px solid $colorwhite;
+
+   
+
+    }
+
+    nav{
+        width: 100%; 
+        display: grid;
+        grid-template-columns: 65%  35%;
+        background: rgba(0, 0, 0, 0.641);;
+         position: absolute;
+         bottom:0;
+         min-height: 60px;
+         left: -1px;
+         @media screen and (max-width:732px) {
+            display:flex ;
+         }
+        .nav-left{
+              display: flex;
+              @include title ;
+              align-items: center;
+              &:hover li:not(:hover){
+                  background: none;
+                 a{
+                    color:$colorwhite;
+                 }
+              }
+
+                li{
+                        height: 100%;
+                        display: flex;
+                        justify-content:center;
+                        align-items: center;
+                        padding: 0 20px;
+
+                    &:first-child{
+                         background:$colorwhite;
+                         a{
+                            color:$colorblack;
+                        }
+                    }
+                    &:hover{
+                        background:$colorwhite;
+                        a{
+                            color:$colorblack;
+                        }
+                    }
+                a{
+                 color:$colorwhite;
+
+                }
+                }
+                
+        }
+
+        .nav-right{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            @media screen and (max-width:732px) {
+                display: none;
+             }
+
+            li{
+                 
+                
+                a{
+                    color:$colorwhite;
+                    font-size: 1.5rem;
+                    display: inline-block;
+                    //  padding: 20px;
+                    &:hover{
+                         transform: scale(1.3);
+                    }
+                }
+            }
+       }
+         
+    }
+}

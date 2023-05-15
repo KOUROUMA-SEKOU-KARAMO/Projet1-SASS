@@ -1,0 +1,101 @@
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/Inter/static/Inter-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: "Merriweather";
+    src: url("../fonts/Merriweather/Merriweather-LightItalic.ttf");
+}
+//   Declaration des variables 
+
+$fontInter: Inter;
+$fontMerriweather:Merriweather;
+
+//   ******* Color ******* 
+
+$colorblack:rgb(15, 15, 15);
+$colorwhite:rgb(255, 254, 254);
+$colorgray1:rgb(161, 160, 160);
+$colrogray2:rgb(181, 181, 181);
+$colrogray3:rgb(204, 202, 202);
+$colorHover: rgba(168, 167, 167, 0.691);
+
+*{
+     margin: 0;
+     padding: 0;
+}
+
+// ************ Style body ******* 
+
+body{
+    
+    width: 100vw;
+    min-height:100vh;
+    overflow-x:hidden ;
+    font-family: $fontMerriweather;
+    text-align: center;
+    background: url("../imgs/bg.jpg") fixed center/cover;
+
+     &:before{
+          content:"";
+           height:100% ;
+           width:100% ;
+           background: #000;
+           position: absolute;
+           left: 0;
+           top: 0;
+           opacity: 1;
+           animation: animBody 1.5s ease  forwards ;
+           animation-delay: .15s;
+
+           @keyframes animBody {
+              to{
+                opacity:0;
+              }
+            
+           }
+     }
+  
+}
+
+@mixin title {
+     font-family: $fontInter;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+}
+
+
+p{
+    font-family: $fontMerriweather;
+    font-style: italic;
+   line-height: 30px ;
+}
+
+.btn{
+    @include title;
+    border:1px solid $colrogray3;
+    color: $colorblack;
+    padding: 10px 30px;
+    display: block;
+    max-width: max-content;
+    border-radius: 4px ;
+    
+
+    &:hover{
+         background: $colorHover;
+    }
+}
+
+header, main, footer{
+       width: 85%;
+       background:$colorwhite;
+       margin: 0 auto ;
+}
+
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}

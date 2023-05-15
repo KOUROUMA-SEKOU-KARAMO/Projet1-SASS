@@ -1,0 +1,103 @@
+footer{
+ margin: 50px auto;
+ .container-footer{
+     display: grid;
+      width: 100%;
+    grid-template-columns: repeat(2,50%);
+    @media screen and (max-width:888px) {
+                   display: block;
+
+    }
+
+    .left{
+         min-height: 600px;
+         border-right:1px solid $colorgray1;
+         padding: 30px 0;
+         
+        form{
+            
+            height: 100%;
+            width: 80%;
+            margin: 0 auto;
+             display: grid;
+             grid-template-rows: 18px 40px 18px 40px  18px  1fr 60px    ;
+             gap: 15px ;
+
+             label{
+                 text-align: left;
+                 @include title ;
+                 color: $colorgray1;
+             }
+
+             input[type="text"], textarea, input[type='email']{
+                 background: none;
+                 border: 1px solid $colorgray1;
+                 box-shadow: 1px 1px 1px   $colorgray1;
+                 border-radius: 5px;
+                 resize: none;
+             }
+
+              .btn{
+                    text-align: center;
+                    display: flex;
+                    align-items: center;justify-content: center;
+              }
+
+
+              @media screen and (max-width:888px) {
+               height: 100%;
+               display: grid;
+             grid-template-rows: 18px 40px 18px 40px  18px  250px 60px    ;
+
+
+            }
+    }
+  }
+
+
+
+//   *** ****** right **** 
+
+  .right{
+      display: grid;
+      grid-template-rows: repeat(4,1fr);
+    span{
+          @include title ;
+          color: $colorgray1;
+    }
+      div{
+         display: grid;
+         grid-template-columns: 30% 70%;
+         border: 1px solid $colorgray1;
+          align-items: center;
+          justify-content: center;
+         text-align: center;
+         p{
+            text-align: left;
+            color: $colorgray1
+         }
+
+         ul{
+            display: flex;
+              align-items: center;
+             li{
+                 padding: 20px;
+                a{
+                    display: inline-block;
+                    width: 30px;
+                    height: 30px;
+                    border: 1px solid $colorgray1;
+                     border-radius: 50%;
+                     display: flex;
+                     align-items: center;
+                     justify-content: center;
+                     box-shadow: 1px 1px 1px $colorgray1;
+                     color: $colorblack;
+                }
+             }
+         }
+      }
+  }
+
+}
+}
